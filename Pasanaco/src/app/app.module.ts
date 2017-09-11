@@ -28,8 +28,8 @@ export const environment = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
