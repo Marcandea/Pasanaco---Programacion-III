@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 import { AngularFireModule } from 'angularfire2';
 
@@ -24,7 +26,9 @@ export const environment = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ export const environment = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
