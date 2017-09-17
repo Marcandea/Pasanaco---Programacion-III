@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Platform, LoadingController} from 'ionic-angular';
 
 import { AuthService } from '../../providers/auth-service';
+import { Facebook } from '@ionic-native/facebook';
 
 import { UserModel } from '../../models/user-model';
 
@@ -26,7 +27,9 @@ export class LoginPage {
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
-    public authService: AuthService) {
+    public authService: AuthService,
+    public platform: Platform,
+    public facebook: Facebook) {
     this.userModel = new UserModel();
   }
 
@@ -51,6 +54,20 @@ export class LoginPage {
             this.alert('Error', 'Ha ocurrido un error inesperado. Por favor intente nuevamente.');
         });
     }
+
+    signInWithFacebook() {
+      if (this.platform.is('cordova')) {
+          return this.facebook.login(['email']).then(result => {
+              this.authService.signInWithFacebook(result.authResponse.accessToken).then(result => {
+                  this.navCtrl.setRoot(HomePage);
+              });
+          });
+      } else {
+          return this.authService.signInWithPopup().then(result => {
+              this.navCtrl.setRoot(HomePage);
+          });
+      }
+    }  
 
   signUp() {
         this.navCtrl.push(SignupPage);

@@ -22,9 +22,9 @@ export class MyApp {
     splashScreen: SplashScreen,
     authService: AuthService) {
     if (authService.authenticated) {
-            this.rootPage = LoginPage;
-    } else {
             this.rootPage = HomePage;
+    } else {
+            this.rootPage = LoginPage;
     }
 
     platform.ready().then(() => {

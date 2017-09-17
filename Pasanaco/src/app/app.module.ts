@@ -13,6 +13,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from '../providers/auth-service';
 
+import { Facebook } from '@ionic-native/facebook';
+
 export const environment = {
   production: false,
   firebase: {
@@ -49,7 +51,8 @@ export const environment = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,
+    Facebook
   ]
 })
 export class AppModule {}
