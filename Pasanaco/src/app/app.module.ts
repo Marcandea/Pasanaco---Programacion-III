@@ -10,6 +10,8 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from '../providers/auth-service';
 
 export const environment = {
   production: false,
@@ -33,7 +35,8 @@ export const environment = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +48,8 @@ export const environment = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthService
   ]
 })
 export class AppModule {}
