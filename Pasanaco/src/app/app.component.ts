@@ -8,13 +8,14 @@ import { AuthService } from '../providers/auth-service';
 import { HomePage } from '../pages/home/home';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { CreargrupoPage } from '../pages/creargrupo/creargrupo';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = LoginPage;
+  rootPage:any = CreargrupoPage;
 
   constructor(
     platform: Platform, 

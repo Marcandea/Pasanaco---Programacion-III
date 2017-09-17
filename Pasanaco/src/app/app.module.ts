@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { CreargrupoPage } from '../pages/creargrupo/creargrupo';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -32,7 +33,8 @@ export const environment = {
     MyApp,
     HomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    CreargrupoPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ export const environment = {
     MyApp,
     HomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    CreargrupoPage
   ],
   providers: [
     StatusBar,

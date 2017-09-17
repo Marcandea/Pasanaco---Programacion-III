@@ -39,4 +39,5 @@ export class AuthService {
     signOut(): Promise<any> {
         return this.angularFireAuth.auth.signOut();
     }
+    
 }
