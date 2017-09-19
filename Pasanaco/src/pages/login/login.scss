@@ -1,5 +1,11 @@
 page-login {
-    .background-page{
-        background:url(../login/fondo1.jpg);
+        .login-background {
+            background-image: url('../assets/fondo1.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+
+        .login-logo {
+            height: 180px;
         }
 }

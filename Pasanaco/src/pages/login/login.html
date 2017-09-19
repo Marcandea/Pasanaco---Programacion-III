@@ -1,12 +1,13 @@
 
 <ion-header>
-    <ion-navbar hideBackButton="true">
+    <ion-navbar color="secondary">
         <ion-title>Iniciar Sesión</ion-title>
     </ion-navbar>
     
 </ion-header>
 
-<ion-content class="background-page">
+<ion-content class="login-background">
+    <img class="login-logo">
     <form #signInForm="ngForm" (submit)="signIn()">
         <ion-list>
             <ion-item>
@@ -21,7 +22,7 @@
             </ion-item>
 
             <div padding-left padding-right padding-top>
-                <button ion-button [disabled]="!signInForm.form.valid" block>Entrar</button>
+                <button color="secondary" ion-button [disabled]="!signInForm.form.valid" block>Entrar</button>
             </div>
 
             <div padding-left padding-right>
