@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+    <ion-navbar color="secondary">
     <ion-title>
       Pasanaco
     </ion-title>
@@ -16,6 +16,13 @@
   <p>
     Bienvenido a Pasanaco.
   </p>
-  <button ion-fab mini><ion-icon name="add"></ion-icon></button>
-  <button color="secondary" (click)="getUser()">mostrar</button>
+
 </ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-10></ion-col>
+    <button ion-fab mini><ion-icon name="add"><a (click)="Creargrupo()"></a></ion-icon></button>
+          </ion-row>
+    </ion-grid>
+</ion-footer>
