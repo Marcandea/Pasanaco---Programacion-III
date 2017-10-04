@@ -22,7 +22,7 @@ export class HomePage {
   }
 
   idUsuario=this.af.auth.currentUser.uid;
-  email=this.af.auth.currentUser.email;
+  emails=[{Usuario:this.af.auth.currentUser.email}];
 
   signOut() {
     this.authService.signOut();

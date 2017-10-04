@@ -1,3 +1,18 @@
 page-home {
-
+    .usuario {
+        background-image: url('../assets/grupo.png');
+        background-size: 100% 100%;
+        height: 120px; width: 120px;
+        margin-left: 90px;
+    }
+    .grupo{
+        border-radius: 10px;
+        border-top-color: #0088FF;
+        border-right-color: #0088FF;
+        border-bottom-color: #0088FF;
+        border-left-color: #0088FF;
+    }
+    .texto{
+        text-align: center;
+    }
 }
