@@ -17,12 +17,20 @@ export class HomePage {
     public navCtrl: NavController,
     public authService: AuthService,
     public af: AngularFireAuth
-    ) {
+    
+  ) {
   }
+
+  idUsuario=this.af.auth.currentUser.uid;
+  email=this.af.auth.currentUser.email;
 
   signOut() {
     this.authService.signOut();
     this.navCtrl.setRoot(LoginPage);
+  }
+
+  showUsers(){
+
   }
 
   getUser(){
