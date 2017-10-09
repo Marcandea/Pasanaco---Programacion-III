@@ -13,19 +13,13 @@
 </ion-header>
 
 <ion-content padding>  
-    <br>
-    <br>
-    <!--><ion-item *ngFor="let email of emails">
-      <h3>{{email}}</h3>
-    </ion-item></!-->
-
     <ion-card class="grupo" >
         <img class="usuario">
         <ion-card-content>
           <ion-card-title class="texto">
             "Nombre de Grupo"
             </ion-card-title>
-          <button ion-button color="card2">Ver mas</button>
+          <button ion-button color="card2" (click)="showAlert()">Ver mas</button>
         </ion-card-content>
     </ion-card>
     <br>
@@ -35,11 +29,9 @@
           <ion-card-title class="texto">
             Radio Taxi Rosales
           </ion-card-title>
-          <button ion-button color="card2">Ver mas</button>
+          <button ion-button color="card2" (click)="showAlert()">Ver mas</button>
         </ion-card-content>
     </ion-card>
-      
-
 </ion-content>
 
 <ion-footer>
@@ -50,8 +42,8 @@
             <ion-fab right bottom>
                 <button ion-fab color="secondary"><ion-icon name="arrow-dropleft"></ion-icon></button>
                 <ion-fab-list side="left">
-                    <button ion-button color="secondary">Crear Grupo</button>
-                    <button ion-button color="danger">Agregar Usuario</button>
+                    <button ion-button color="secondary" (click)="showAlert2()">Crear Grupo</button>
+                    <button ion-button color="danger" (click)="showAlert2()">Agregar Usuario</button>
                 </ion-fab-list>
               </ion-fab>
           </ion-row>
